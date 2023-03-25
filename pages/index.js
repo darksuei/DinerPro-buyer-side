@@ -1,11 +1,13 @@
 
+
 export default function Home() {
   return (
     <>
-  
-      <div>
-        Just do
-      </div>
+    
+      <h1>
+
+        Just do dinner pro
+      </h1>
     </>
   );
 }
