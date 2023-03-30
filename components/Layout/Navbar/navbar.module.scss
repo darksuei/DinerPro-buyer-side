@@ -1,0 +1,39 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100vw;
+  border-bottom: 0.5px solid var(--clr-text-black);
+  padding: 1rem 2rem;
+  .Logo {
+    position: relative;
+    width: 110px;
+    height: 40px;
+  }
+  .ticker {
+    background-color: var(--clr-brandcolor);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+  }
+  .linksContainer {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    .link {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      transition: all .8s;
+      p {
+        font-weight: 100;
+        &:hover {
+          font-weight: 900;
+          scale: 1.01;
+        }
+      }
+    }
+  }
+}
