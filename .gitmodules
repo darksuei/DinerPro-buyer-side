@@ -1,0 +1,3 @@
+[submodule "DinerPro"]
+	path = DinerPro
+	url = https://github.com/Suei43/DinerPro.git
