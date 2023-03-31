@@ -6,7 +6,6 @@ import Link from "next/link";
 import Button from "@/components/Button/button";
 export default function Navbar() {
   const Route = useRouter();
-  console.log(Route);
   return (
     <div className={styles.container}>
       <div className={styles.Logo}>
@@ -29,8 +28,12 @@ export default function Navbar() {
             </Link>
           );
         })}
-        <Button background={"--clr-button-background"} Title="Sign in" _width="100" func={() => console.log("Button clicked")} />
-
+        <Button
+          background={"--clr-button-background"}
+          Title="Sign in"
+          _width="100"
+          func={() => console.log("Button clicked")}
+        />
       </div>
     </div>
   );

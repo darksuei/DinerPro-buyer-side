@@ -1,0 +1,50 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3.5rem 0 0 0;
+  gap: 1.5rem;
+  border: 0.8px solid gray;
+}
+.container .getStartedBtn {
+  display: flex;
+  gap: 2rem;
+  display: flex;
+}
+.container .getStartedBtn .vidDemoBtn {
+  border: 0.5px solid gray;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  gap: 9px;
+}
+.container .getStartedBtn .vidDemoBtn div {
+  transform: translate();
+}
+.container .searchContainer {
+  display: flex;
+  align-items: center;
+  background-color: var(--clr-lightGrayBg);
+  border-radius: 10px;
+  gap: 2rem;
+  padding: 0 0 0 4rem;
+  color: gray;
+}
+.container .searchContainer .searchDiv {
+  display: flex;
+  gap: 0.8rem;
+}
+.container .highlightsContainer {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.container .highlightsContainer .highlightsBtn {
+  border: 1.5px solid var(--clr-secondary);
+  padding: 0.6rem 1rem;
+  border-radius: 15px;
+}/*# sourceMappingURL=heros.module.css.map */

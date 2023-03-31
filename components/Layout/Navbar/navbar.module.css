@@ -4,7 +4,14 @@
   justify-content: space-between;
   width: 100vw;
   border-bottom: 0.5px solid var(--clr-text-black);
-  padding: 1rem 2rem;
+  padding: 1rem 2.5rem;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color: #fff;
+  height: 12vh;
+  z-index: 10;
 }
 .container .Logo {
   position: relative;
@@ -29,8 +36,6 @@
   justify-content: center;
   flex-direction: column;
   transition: all 0.8s;
-}
-.container .linksContainer .link p {
   font-weight: 100;
 }
 .container .linksContainer .link p:hover {

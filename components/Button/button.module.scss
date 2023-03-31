@@ -1,0 +1,13 @@
+.btn {
+  padding: 0.5rem 1rem;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: all ease-in-out .5S;
+  &:hover{
+    scale: 1.02;
+  }
+  &:active{
+    scale: .86;
+  }
+}
