@@ -20,6 +20,7 @@ export default function Comments() {
                             <Image src={card.authorPics} fill styles={{objectFit: "cover"}} alt="Authors pictuture"/>
                         </div>
                         <div>{card.authorComment}</div>
+                        <div></div><p>{}</p>
                     </div>
                 );
             })
