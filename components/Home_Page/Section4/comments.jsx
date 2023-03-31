@@ -1,31 +1,37 @@
-import pics1 from "../../../Assets/homeSec3_1";
-import pics2 from "../../../Assets/homeSec3_2";
-import pics3 from "../../../Assets/homeSec3_3";
-import pics4 from "../../../Assets/homeSec3_3";
-import styles from "./comments.module.scss";
+import pics1 from "../../../Assets/homeSec3_1.png";
+import pics2 from "../../../Assets/homeSec3_2.png";
+import pics3 from "../../../Assets/homeSec3_3.png";
+import pics4 from "../../../Assets/homeSec3_3.png";
+
 import Image from "next/image";
 
+import styles from "./comments.module.css";
 
 export default function Comments() {
   return (
-    <div>
+    <div className={styles.container}>
       <h1>What Our People Say!</h1>
       <p>Our Customers are our top priority, Lets see what they have to say </p>
       <div className={styles.cardsContainer}>
-        {
-            comments.map((card, i)=>{
-                return (
-                    <div key={i} className={styles.card}>
-                        <div>
-                            <Image src={card.authorPics} fill styles={{objectFit: "cover"}} alt="Authors pictuture"/>
-                        </div>
-                        <div>{card.authorComment}</div>
-                        <div></div><p>{}</p>
-                    </div>
-                );
-            })
-        }
-
+        {comments.map((card, i) => {
+          return (
+            <div key={i} className={styles.card} style={{marginTop: card.marginTop? "12vh": "0"}}>
+              <div className={styles.imageDiv}>
+                <Image
+                  src={card.authorPics}
+                  fill
+                  styles={{ objectFit: "cover" }}
+                  alt="Authors pictuture"
+                />
+              </div>
+              <div>{card.authorComment}</div>
+              <div>
+                <div></div>
+                <p>{card.authourName}</p>
+              </div>
+            </div>
+          );
+        })}
       </div>
     </div>
   );
@@ -41,7 +47,7 @@ const comments = [
       </p>
     ),
     authourName: "Tania Peters , HOM",
-    marginTop: false
+    marginTop: false,
   },
   {
     authorPics: pics2,
@@ -53,7 +59,7 @@ const comments = [
       </p>
     ),
     authourName: "Amanda Walters",
-    marginTop: true
+    marginTop: true,
   },
   {
     authorPics: pics3,
@@ -64,7 +70,7 @@ const comments = [
       </p>
     ),
     authourName: "John Philips, CEO",
-    marginTop: false
+    marginTop: false,
   },
   {
     authorPics: pics4,
@@ -75,6 +81,6 @@ const comments = [
       </p>
     ),
     authourName: "Daniel white, CEO",
-    marginTop: true
+    marginTop: true,
   },
 ];

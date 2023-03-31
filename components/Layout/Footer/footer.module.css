@@ -1,0 +1,36 @@
+.container {
+  padding: 4vh 3vw;
+}
+.container .footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4vh 0;
+  border-bottom: 3px solid var(--clr-primary);
+}
+.container .footer .tableWrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.container .footer .tableWrapper .column {
+  flex-basis: 48%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.container .footer .tableWrapper .column p {
+  margin: 0;
+  line-height: 1.5;
+}
+.container .socials {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+.container .socials .iconDiv {
+  border: 1px solid gray;
+  border-radius: 50%;
+}
+.container .socials .iconDiv div {
+  padding: 12px;
+}/*# sourceMappingURL=footer.module.css.map */
