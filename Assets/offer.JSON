@@ -1,0 +1,22 @@
+[
+    {
+        "name": "restaurant management",
+        "text":"use dinerPro to manage both online and offline orders at your restaurant. Manage inventories to know your business standing.",
+        "background": "/images/offer/restaurant.jpeg"
+    },
+    {
+        "name": "Event Management/Catering",
+        "text":"get offers to provide outdoor services for events to boost your business. our procurement solutions helps you execute better.",
+        "background": "/images/offer/catering.jpeg"
+    },
+    {
+        "name": "customer maintenance",
+        "text":"we hold ypour hand at every step of the way to provide better meals to your clients. Get customer feedbacks and reviews.",
+        "background": "/images/offer/customer.jpeg"
+    },
+    {
+        "name": "data management",
+        "text":"plan better. get insights into your business accross financial and inventory management.",
+        "background": "/images/offer/data.jpeg"
+    }
+]

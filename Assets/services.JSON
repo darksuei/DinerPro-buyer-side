@@ -1,0 +1,26 @@
+[
+    {
+        "name": "order management",
+        "background": "/images/services/ifeed.jpeg"
+    },
+    {
+        "name": "quick delivery",
+        "background": "/images/services/bikeboi.jpeg"
+    },
+    {
+        "name": "digital payment gateway",
+        "background": "/images/services/digital.jpeg"
+    },
+    {
+        "name": "payment management",
+        "background": "/images/services/payment.jpeg"
+    },
+    {
+        "name": "communication",
+        "background": "/images/services/communication.jpeg"
+    },
+    {
+        "name": "vendor and procurement",
+        "background": "/images/services/vendour.jpeg"
+    }
+]
