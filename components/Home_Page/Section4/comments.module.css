@@ -4,7 +4,9 @@
   flex-direction: column;
   align-items: center;
   gap: 2.5rem;
-  padding: 4vh 3vw;
+  padding: 4vh 0;
+  padding-bottom: 10vh;
+  border: 0.8px solid gray;
 }
 .container .cardsContainer {
   display: flex;
@@ -13,7 +15,7 @@
 }
 .container .cardsContainer .card {
   border-radius: 12px;
-  box-shadow: 0 0 10px 10px var(--clr-primary);
+  box-shadow: -4px -1px 15px 1px rgba(0, 0, 0, 0.75);
   display: flex;
   flex-direction: column;
   align-items: center;

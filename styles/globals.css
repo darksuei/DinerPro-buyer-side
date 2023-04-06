@@ -1,16 +1,33 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@1-1000&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@1-1000&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 :root {
   --clr-primary: #0d133b;
-  --clr-secondary: #FFA902;
-  --clr-brandcolor: #FF8213;
-  --clr-text-black: #0C0101;
-  --clr-button-background: #D71400;
+  --clr-secondary: #ffa902;
+  --clr-brandcolor: #ff8213;
+  --clr-text-black: #0c0101;
+  --clr-button-background: #d71400;
   --clr-blur-200: #67688b;
   --clr-lightGrayBg: rgba(111, 108, 108, 0.05);
 }
 
+.headers {
+  @apply font-bold text-[2.5rem];
+}
 
+/* onBoordingForm */
+.onBoardHeaders {
+  @apply font-bold text-[2.5rem] text-[#FF8213];
+}
+.authInputBox {
+  @apply border border-gray-500 px-4 py-3 bg-white focus:outline-[none]
+  w-[250px]
+text-[.8rem];
+}
+.formBtns{
+  @apply   text-center bg-[#ff8213] text-white font-semibold px-6 py-2;
+}
 
 * {
   box-sizing: border-box;
@@ -22,26 +39,5 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
-  font-family: 'IBM Plex Mono', monospace;
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+  font-family: "IBM Plex Mono", monospace;
 }

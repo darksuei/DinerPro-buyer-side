@@ -4,11 +4,10 @@ import { CiSearch } from "react-icons/ci";
 import { IoIosArrowDown } from "react-icons/io";
 import styles from "./heros.module.css";
 
-
 export default function Heros() {
   return (
     <div className={styles.container}>
-      <h1>Kitchen Management Reinvented!</h1>
+      <h1 className="headers">Kitchen Management Reinvented!</h1>
       <p>See how our software can revolutionize your business.</p>
 
       <div className={styles.getStartedBtn}>

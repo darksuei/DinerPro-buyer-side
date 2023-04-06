@@ -9,7 +9,7 @@ export default function HomeSection1() {
   return (
     <section className={styles.container}>
       <div className={styles.leftSideDiv}>
-        <h1>Food delivery and Event catering</h1>
+        <h1 className="headers">Food delivery and Event catering</h1>
         <p>
           Build a flexible food business. Get in-person, delivery orders and
           bookings for your services. Expand your customer base.{" "}

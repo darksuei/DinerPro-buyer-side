@@ -16,18 +16,19 @@ export default function Navbar() {
           alt="DinnerPro Logo"
         />
       </div>
-
       <div className={styles.linksContainer}>
-        {NavLinks.map((link, i) => {
-          return (
-            <Link href={link.Route} key={i} className={styles.link}>
-              <p>{link.title}</p>
-              {Route.pathname == link.Route && (
-                <div className={styles.ticker}></div>
-              )}
-            </Link>
-          );
-        })}
+        <div className="flex items-start gap-[2rem]">
+          {NavLinks.map((link, i) => {
+            return (
+              <Link href={link.Route} key={i} className={styles.link}>
+                <p>{link.title}</p>
+                {Route.pathname == link.Route && (
+                  <div className={styles.ticker}></div>
+                )}
+              </Link>
+            );
+          })}
+        </div>
         <Button
           background={"--clr-button-background"}
           Title="Sign in"
@@ -46,14 +47,14 @@ const NavLinks = [
   },
   {
     title: "Services",
-    Route: "/Services",
+    Route: "/services",
   },
   {
     title: "Solutions",
-    Route: "/Offers",
+    Route: "/offers",
   },
   {
     title: "About Us",
-    Route: "/About us",
+    Route: "/about",
   },
 ];

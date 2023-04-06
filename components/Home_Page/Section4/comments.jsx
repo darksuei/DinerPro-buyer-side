@@ -10,7 +10,7 @@ import styles from "./comments.module.css";
 export default function Comments() {
   return (
     <div className={styles.container}>
-      <h1>What Our People Say!</h1>
+      <h1 className="headers">What Our People Say!</h1>
       <p>Our Customers are our top priority, Lets see what they have to say </p>
       <div className={styles.cardsContainer}>
         {comments.map((card, i) => {

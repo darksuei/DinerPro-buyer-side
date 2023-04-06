@@ -1,0 +1,6 @@
+.cardBox:hover .cardButton{
+    transform: translateY(-80%);
+}   
+.cardBox:hover .cardText{
+    opacity: 1;
+}

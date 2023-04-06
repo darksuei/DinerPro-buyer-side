@@ -7,7 +7,7 @@ import styles from "./services.module.css";
 export default function Services() {
   return (
     <div className={styles.container}>
-      <h1>What we Offer</h1>
+      <h1 className="headers">What we Offer</h1>
       <div className={styles.cardsContainer}>
         {cardInfo.map((card, i) => {
           return (
