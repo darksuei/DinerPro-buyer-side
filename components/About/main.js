@@ -1,4 +1,6 @@
 function Main() {
+  // About page main content
+  
   return (
     <section className=" lg:pt-[6rem]">
       <div
@@ -57,4 +59,4 @@ function Main() {
 }
 
 export default Main;
-// pb-[2rem] sm:pb-[4rem]
+
