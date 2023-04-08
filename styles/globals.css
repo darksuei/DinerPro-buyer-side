@@ -38,6 +38,5 @@ text-[.8rem];
 html,
 body {
   overflow-x: auto;
-  overflow-y: scroll;
   font-family: "IBM Plex Mono", monospace;
 }
