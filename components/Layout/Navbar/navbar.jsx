@@ -19,6 +19,7 @@ export default function Navbar() {
 
     return () => window.removeEventListener("scroll", navColor)
   }, [])
+  // console.log(Route.pathname)
 
   return (
     <div className={`${styles.container} ${top? 'bg-white': ''}`}>
@@ -34,7 +35,7 @@ export default function Navbar() {
         <div className="flex items-start gap-[2rem]">
           {NavLinks.map((link, i) => {
             return (
-              <Link href={link.Route} key={i} className={`${styles.link} ${top? "": "text-white"}`}>
+              <Link href={link.Route} key={i} className={`${styles.link} ${top || Route.pathname === '/'? "text-black": "text-white"} `}>
                 <p>{link.title}</p>
                 {Route.pathname == link.Route && (
                   <div className={styles.ticker}></div>
