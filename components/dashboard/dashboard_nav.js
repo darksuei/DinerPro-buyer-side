@@ -1,14 +1,12 @@
 import { useRouter } from 'next/router'
 import Link from 'next/link'
-import Image from 'next/image'
 import styles from './dashboard_nav.module.css'
-import Logo from '../../Assets/Logo.png'
 import { HiMenuAlt3 } from 'react-icons/hi'
 import { AiOutlineArrowRight, AiOutlineSetting} from 'react-icons/Ai'
 import { GoDashboard } from 'react-icons/go'
 import { GiKnifeFork} from 'react-icons/gi'
 import { TbCurrencyNaira} from 'react-icons/tb'
-import { MdOutlineBikeScooter} from 'react-icons/md'
+import { MdOutlineBikeScooter, MdOutlineLogout} from 'react-icons/md'
 
 function Dashboard_nav({minimize, setMinimize}) {
     const Route = useRouter()
@@ -17,22 +15,9 @@ function Dashboard_nav({minimize, setMinimize}) {
     <div 
         className={styles.container}>
         <div 
-            className={styles.logo}>
-
-            {/* logo picture */}
-            <Link 
-                className={styles.logo_image} 
-                href={`/`}>
-                <Image 
-                    src={Logo} 
-                    fill 
-                    style={{objectFit: "contain"}} 
-                    alt="dinnerpro"/>
-            </Link>
-        </div>
-        <div 
             className={styles.main}>
             {/* main navigation */}
+            <section>
             <span className={styles.hi_user}>
                 <p>Hi {username}</p>
                 <button
@@ -56,6 +41,19 @@ function Dashboard_nav({minimize, setMinimize}) {
                     })
                 }
             </ul>
+            </section>
+
+            {/* logout button */}
+            <div className={styles.log_out}>
+                <hr className='border-t-[0.1rem] w-[80%] m-auto border-neutral-600 opacity-50' />
+                <Link 
+                    href={`#`}
+                    className={`${styles.nav_link}`}>
+                    <p><MdOutlineLogout/></p>
+                    <p>Sign out</p>
+                    <p className={`${styles.icon} ${minimize && styles.icon_active}`}><MdOutlineLogout/></p>
+                </Link>
+            </div>
         </div>
     </div>
   )
