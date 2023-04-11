@@ -17,8 +17,10 @@ export default function Sidebar() {
         {sideBarLinks.map((link, index) => {
           return (
             <Link href={link.route} key={index}>
-              <div>{link.icon}</div>
-              <p>{link.title}</p>
+              <div className="">
+                <div>{link.icon}</div>
+                <p>{link.title}</p>
+              </div>
             </Link>
           );
         })}
