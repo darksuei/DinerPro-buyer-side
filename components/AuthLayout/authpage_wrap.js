@@ -1,11 +1,11 @@
 import { useRouter } from "next/router"
-import { useEffect, useState } from "react"
-import Dashboard_nav from "./sidebar_nav"
-import styles from './sidebar_wrap.module.css'
-// import TopBar from "../dashboard_component/topBar"
+import { useEffect, useState } from "react";
+import Sidebar_nav from "./Sidebar/sidebar_nav";
+import styles from "./Sidebar/sidebar_wrap.module.css";
+import TopBar from "./topBar";
 
 
-function Dashboard_wrap({children}) {
+function AuthPage_Layout_wrap({children}) {
   // this component contains the navigation on the left of all the logged in pages
   // it also contains the function that will check and redirect users that are not logged in to the login page
   const router = useRouter()
@@ -29,10 +29,10 @@ function Dashboard_wrap({children}) {
   } else{
     return (
       <section className={styles.dashboard_wrap}>
-        {/* <TopBar/> */}
+        <TopBar/>
         <div  className="flex min-h-[calc(max(42rem,100vh)-4rem)]">
           <div className={`min-h-full transition duration-75  w-[25rem] ${minimize? '':"translate-x-[-85%]"}`}>
-            <Dashboard_nav
+            <Sidebar_nav
               minimize={minimize}
               setMinimize={setMinimize}/>
           </div>
@@ -47,4 +47,4 @@ function Dashboard_wrap({children}) {
   }
 }
 
-export default Dashboard_wrap
+export default AuthPage_Layout_wrap;

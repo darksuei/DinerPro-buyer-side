@@ -2,7 +2,7 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import Logo from "../../Assets/Logo.png";
-import styles from "../dashboard/dashboard_wrap.module.css";
+import styles from "./Sidebar/sidebar_wrap.module.css"
 import { AiOutlineSetting } from "react-icons/Ai";
 import { GoDashboard } from "react-icons/go";
 import { GiKnifeFork } from "react-icons/gi";
@@ -73,13 +73,13 @@ const username = "Lana";
 
 const nav_endpoints = [
   {
-    name: "dashboard",
+    name: "Dashboard",
     path: "/dashboard",
     icon: <GoDashboard />,
   },
   {
-    name: "orders",
-    path: "/orders",
+    name: "Orders",
+    path: "/order",
     icon: <GiKnifeFork />,
   },
   {
@@ -88,12 +88,12 @@ const nav_endpoints = [
     icon: <TbCurrencyNaira />,
   },
   {
-    name: "settings",
+    name: "Settings",
     path: "/settings",
     icon: <MdOutlineBikeScooter />,
   },
   {
-    name: "help desk",
+    name: "Help desk",
     path: "/help_desk",
     icon: <AiOutlineSetting />,
   },

@@ -2,7 +2,7 @@ import AuthPage_Layout_wrap from "@/components/AuthLayout/authpage_wrap";
 import Head from "next/head";
 import styles from "../components/AuthLayout/Sidebar/sidebar_wrap.module.css";
 
-export default function Order() {
+export default function OnBoard() {
   return (
     <AuthPage_Layout_wrap>
       <Head>
