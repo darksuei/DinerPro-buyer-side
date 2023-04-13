@@ -73,7 +73,7 @@ const nav_endpoints = [
     },
     {
         name: "orders",
-        path: "/orders",
+        path: "/account/orders",
         icon: <GiKnifeFork/>
     },
     {

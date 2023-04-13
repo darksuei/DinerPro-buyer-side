@@ -4,7 +4,7 @@ import Question from "./question";
 import { useState } from "react";
 
 export default function Layout({ children }) {
-  const [authenticate, setAuthenticate] = useStateeState(false);
+  const [authenticate, setAuthenticate] = useState(false);
   return (
     <>
       <Navbar authenticate={authenticate} />
