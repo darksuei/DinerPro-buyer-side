@@ -1,0 +1,40 @@
+.container {
+    @apply h-full;
+    .main {
+        @apply flex justify-between flex-col bg-[#FFA902] min-h-[100%] text-[1.5rem] w-full rounded-tr-[1.5rem];
+        padding: 1rem 0rem 1rem 1rem;
+
+        .hi_user{
+            @apply flex justify-between items-center pr-[1rem];
+        }
+        .nav_list{
+                @apply font-[600] flex flex-col gap-[1.4rem] text-neutral-600 pt-[4rem] pl-[1rem] capitalize text-[1.2rem];
+        }
+      
+        .nav_link{
+            @apply relative flex gap-[1.3rem] py-3 pl-5 rounded-tl-[2rem] items-center;
+        }
+        .nav_link_active{
+            @apply bg-white text-[1.4rem];
+        }
+        .icon{
+            @apply transition duration-75 absolute right-4;
+        }
+        .icon_active{
+            @apply hidden;
+        }
+        .log_out{
+            @apply text-[1.2rem] font-[600] text-neutral-600;
+        }
+    }
+}
+/* Hide scrollbar for Chrome, Safari and Opera */
+.no_scroll_bar::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no_scroll_bar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
