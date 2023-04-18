@@ -76,8 +76,8 @@ const nav_endpoints = [
     icon: <GoDashboard />,
   },
   {
-    name: "orders",
-    path: "/account/orders",
+    name: "Orders",
+    path: "/auth/order",
     icon: <GiKnifeFork />,
   },
   {

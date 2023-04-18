@@ -1,5 +1,5 @@
 .container {
-  @apply h-full;
+  @apply h-[85vh];
 }
 .container .main {
   @apply flex justify-between flex-col bg-[#FFA902] min-h-[100%] text-[1.5rem] w-full rounded-tr-[1.5rem];

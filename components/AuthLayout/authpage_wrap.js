@@ -9,9 +9,7 @@ function AuthPage_Layout_wrap({children}) {
   // this component contains the navigation on the left of all the logged in pages
   // it also contains the function that will check and redirect users that are not logged in to the login page
   const router = useRouter()
-
   const [loggedIn, setLoggedIn] = useState(true)
-
   const [minimize, setMinimize] = useState(true)
 
   useEffect(() => {
@@ -30,7 +28,7 @@ function AuthPage_Layout_wrap({children}) {
     return (
       <section className={styles.dashboard_wrap}>
         <TopBar/>
-        <div  className="flex min-h-[calc(max(42rem,100vh)-4rem)]">
+        <div  className="flex ">
           <div className={`min-h-full transition duration-75  w-[25rem] ${minimize? '':"translate-x-[-85%]"}`}>
             <Sidebar_nav
               minimize={minimize}
