@@ -1,5 +1,9 @@
-export default function Order (){
+import Cart from "./cartcontainer"
+
+export default function OrderComponent (){
     return(
-        <div></div>
+        <div>
+            <Cart/>
+        </div>
     )
 }
