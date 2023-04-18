@@ -1,0 +1,54 @@
+@mixin center_flex{
+    @apply flex justify-between;
+}
+@mixin border_box_thin_rounded{
+    @apply border-[0.1rem] border-[var(--clr-grey-border)] rounded-[0.7rem] ;
+}
+
+.section1{
+    @include center_flex;
+    
+    .text{
+        h1{
+            @apply text-[1.4rem] capitalize font-[600];
+        }
+        p{
+            @apply text-[0.8rem] font-[400] capitalize;
+        }
+    }
+
+    .searches{
+        @include center_flex;
+        @apply max-lg:flex-col max-lg:gap-2 gap-4;
+
+        .search_box,
+        .location_box {
+            @apply rounded-[25px] h-fit border-[0.1rem] flex gap-2 border-[var(--clr-grey-border)] py-[0.1rem] px-[1rem];
+    
+            input {
+                @apply h-[1.5rem] w-[10rem] font-[0.7rem] outline-0;
+            }
+        }
+    }
+}
+.section2{
+    @apply w-[1200px];
+    background-color: blue;
+}
+.aside{
+    @apply pt-[1.5rem];
+    width: 250px;
+    min-width: 250px;
+
+    .header_text{
+        @apply flex gap-2 text-[1.3rem] items-center capitalize font-[600];
+    }
+    .trending_menu{
+        @include border_box_thin_rounded; 
+        @apply px-2 py-3;
+        .trend_menu{
+            @include border_box_thin_rounded;
+            @apply overflow-clip h-[80px] flex;
+        }
+    }
+}

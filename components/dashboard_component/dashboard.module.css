@@ -1,0 +1,45 @@
+.section1 {
+  @apply flex justify-between;
+}
+.section1 .text h1 {
+  @apply text-[1.4rem] capitalize font-[600];
+}
+.section1 .text p {
+  @apply text-[0.8rem] font-[400] capitalize;
+}
+.section1 .searches {
+  @apply flex justify-between;
+  @apply max-lg:flex-col max-lg:gap-2 gap-4;
+}
+.section1 .searches .search_box,
+.section1 .searches .location_box {
+  @apply rounded-[25px] h-fit border-[0.1rem] flex gap-2 border-[var(--clr-grey-border)] py-[0.1rem] px-[1rem];
+}
+.section1 .searches .search_box input,
+.section1 .searches .location_box input {
+  @apply h-[1.5rem] w-[10rem] font-[0.7rem] outline-0;
+}
+
+.section2 {
+  @apply w-[1200px];
+  background-color: blue;
+}
+
+.aside {
+  @apply pt-[1.5rem];
+  width: 250px;
+  min-width: 250px;
+}
+.aside .header_text {
+  @apply flex gap-2 text-[1.3rem] items-center capitalize font-[600];
+}
+.aside .trending_menu {
+  @apply border-[0.1rem] border-[var(--clr-grey-border)] rounded-[0.7rem];
+  @apply px-2 py-3;
+}
+.aside .trending_menu .trend_menu {
+  @apply border-[0.1rem] border-[var(--clr-grey-border)] rounded-[0.7rem];
+  @apply overflow-clip h-[80px] flex;
+}
+
+/*# sourceMappingURL=dashboard.module.css.map */

@@ -38,7 +38,7 @@ function Dashboard_wrap({children}) {
           </div>
 
           {/* the individual pages are wrapped here */}
-          <div className={`float-righ max-h-[100vh] transition duration-100 ${minimize? "w-[calc(100vw)]":"-ml-[21rem] w-[calc(100vw)]" }`}>
+          <div className={`float-righ max-h-[100vh] transition duration-100 ${minimize? "w-[calc(100vw-20rem)]":"-ml-[21rem] w-[calc(100vw-4rem)]" }`}>
             {children}
           </div>
         </div>
