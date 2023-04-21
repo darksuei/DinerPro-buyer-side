@@ -40,6 +40,4 @@
 .aside .trending_menu .trend_menu {
   @apply border-[0.1rem] border-[var(--clr-grey-border)] rounded-[0.7rem];
   @apply overflow-clip h-[80px] flex;
-}
-
-/*# sourceMappingURL=dashboard.module.css.map */
+}/*# sourceMappingURL=dashboard.module.css.map */

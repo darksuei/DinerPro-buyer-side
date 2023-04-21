@@ -26,9 +26,9 @@ function AuthPage_Layout_wrap({children}) {
     redirect()
   } else{
     return (
-      <section className={styles.dashboard_wrap}>
+      <div className="h-screen w-screen overflow-x-hidden flex flex-col justify-between">
         <TopBar/>
-        <div  className="flex ">
+        <div  className="flex h-[85vh]">
           <div className={`min-h-full transition duration-75  w-[25rem] ${minimize? '':"translate-x-[-85%]"}`}>
             <Sidebar_nav
               minimize={minimize}
@@ -40,7 +40,7 @@ function AuthPage_Layout_wrap({children}) {
             {children}
           </div>
         </div>
-      </section>
+      </div>
     )
   }
 }

@@ -16,7 +16,7 @@ export default function CartCard({ imageUrl, foodName, priceTag, ordeUrl }) {
           alt="Food Image"
         />
       </div>
-      <div className="w-full flex items-start bg-white p-4 justify-between">
+      <div className="flex items-start bg-white p-4 justify-between">
         <div className="flex items-start gap-4">
           <div>
             <h4>{foodName}</h4>

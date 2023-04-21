@@ -1,7 +1,7 @@
 .dashboard_wrap {
     @apply h-screen w-screen overflow-x-hidden flex flex-col justify-between;
   .heading {
-    @apply flex justify-between w-screen h-[10vh];
+    @apply flex justify-between items-center w-screen h-[10vh];
     // top bar section
     .logo {
       @apply flex justify-start relative p-[1rem];

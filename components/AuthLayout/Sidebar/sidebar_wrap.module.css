@@ -2,7 +2,7 @@
   @apply h-screen w-screen overflow-x-hidden flex flex-col justify-between;
 }
 .dashboard_wrap .heading {
-  @apply flex justify-between w-screen h-[10vh];
+  @apply flex justify-between items-center w-screen h-[10vh];
 }
 .dashboard_wrap .heading .logo {
   @apply flex justify-start relative p-[1rem];
