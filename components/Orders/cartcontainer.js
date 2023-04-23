@@ -10,13 +10,13 @@ import Img2 from "@/public/images/cartTest/img2.png";
 
 export default function Cart() {
   return (
-    <div className="h-[85vh] overflow-hidden">
+    <div className="h-[85vh] w-[65%] overflow-hidden">
       <h1>Cart</h1>
       <div>
         <SearchLocation />
         <Searchbar />
       </div>
-      <div>
+      <div className="grid grid-rows-3 grid-flow-col gap-3 overflow-x-auto w-[89%]">
         {foodArrays.map((food, i) => {
           return (
             <CartCard
@@ -34,6 +34,72 @@ export default function Cart() {
 }
 
 const foodArrays = [
+  {
+    imageUrl: Img1,
+    foodName: "French Fries",
+    priceTag: "1200",
+    orderUrl: "",
+  },
+  {
+    imageUrl: Img1,
+    foodName: "French Fries",
+    priceTag: "1200",
+    orderUrl: "",
+  },
+  {
+    imageUrl: Img1,
+    foodName: "French Fries",
+    priceTag: "1200",
+    orderUrl: "",
+  },
+  {
+    imageUrl: Img1,
+    foodName: "French Fries",
+    priceTag: "1200",
+    orderUrl: "",
+  },
+  {
+    imageUrl: Img1,
+    foodName: "French Fries",
+    priceTag: "1200",
+    orderUrl: "",
+  },
+  {
+    imageUrl: Img1,
+    foodName: "French Fries",
+    priceTag: "1200",
+    orderUrl: "",
+  },
+  {
+    imageUrl: Img1,
+    foodName: "French Fries",
+    priceTag: "1200",
+    orderUrl: "",
+  },
+  {
+    imageUrl: Img1,
+    foodName: "French Fries",
+    priceTag: "1200",
+    orderUrl: "",
+  },
+  {
+    imageUrl: Img1,
+    foodName: "French Fries",
+    priceTag: "1200",
+    orderUrl: "",
+  },
+  {
+    imageUrl: Img1,
+    foodName: "French Fries",
+    priceTag: "1200",
+    orderUrl: "",
+  },
+  {
+    imageUrl: Img1,
+    foodName: "French Fries",
+    priceTag: "1200",
+    orderUrl: "",
+  },
   {
     imageUrl: Img1,
     foodName: "French Fries",
