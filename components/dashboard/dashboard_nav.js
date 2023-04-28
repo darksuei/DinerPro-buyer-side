@@ -68,7 +68,7 @@ const username = "Lana"
 const nav_endpoints = [
     {
         name: "dashboard",
-        path: "/dashboard",
+        path: "/auth/dashboard",
         icon: <GoDashboard/>
     },
     {

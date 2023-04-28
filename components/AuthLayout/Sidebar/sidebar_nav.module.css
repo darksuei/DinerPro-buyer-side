@@ -2,7 +2,7 @@
   @apply h-[85vh];
 }
 .container .main {
-  @apply flex justify-between flex-col bg-[#FFA902] min-h-[100%] text-[1.5rem] w-full rounded-tr-[1.5rem];
+  @apply flex justify-between flex-col bg-[#FFA902] h-[100%] text-[1.5rem] w-full rounded-tr-[1.5rem];
   padding: 1rem 0rem 1rem 1rem;
 }
 .container .main .hi_user {
@@ -36,4 +36,4 @@
 .no_scroll_bar {
   -ms-overflow-style: none;
   scrollbar-width: none;
-}/*# sourceMappingURL=sidebar_nav.module.css.map */
+} /*# sourceMappingURL=sidebar_nav.module.css.map */
