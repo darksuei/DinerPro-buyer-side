@@ -36,7 +36,7 @@ function AuthPage_Layout_wrap({children}) {
           </div>
 
           {/* the individual pages are wrapped here */}
-          <div className={`float-righ max-h-[100vh] transition duration-100 ${minimize? "w-[calc(100vw)]":"-ml-[21rem] w-[calc(100vw)]" }`}>
+          <div className={`relative float-righ max-h-[100vh] transition duration-100 ${minimize? "w-[calc(85vw)]":"-ml-[21rem] w-[calc(100vw)]" }`}>
             {children}
           </div>
         </div>

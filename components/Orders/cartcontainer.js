@@ -10,7 +10,7 @@ import Img2 from "@/public/images/cartTest/img2.png";
 
 export default function Cart() {
   return (
-    <div className="h-[85vh] w-[65%] overflow-hidden">
+    <div className="relative h-[85vh] w-[65%] overflow-hidden">
       <h1>Cart</h1>
       <div>
         <SearchLocation />
