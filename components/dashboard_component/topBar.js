@@ -21,7 +21,6 @@ function TopBar() {
   return (
     <div className={styles.heading}>
       <div className={styles.logo}>
-        {/* logo picture */}
         <Link className={styles.logo_image} href={`/`}>
           <Image src={Logo} style={{ objectFit: "contain" }} alt="dinnerpro" />
         </Link>

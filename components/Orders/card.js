@@ -7,8 +7,8 @@ import { useState } from "react";
 export default function CartCard({ imageUrl, foodName, priceTag, ordeUrl }) {
   const [like, setLike] = useState(false);
   return (
-    <div className="w-[180px] shadow-lg">
-      <div className="relative w-[100%] h-[120px]">
+    <div className="w-[180px] shadow-lg rounded-lg overflow-hidden">
+      <div className="relative w-[100%] h-[60px]">
         <Image
           style={{ objectFit: "cover" }}
           fill
@@ -16,11 +16,11 @@ export default function CartCard({ imageUrl, foodName, priceTag, ordeUrl }) {
           alt="Food Image"
         />
       </div>
-      <div className="flexw-full flex-col items-start justify-center bg-white p-4 justify-between">
-        <div className="flex items-center gap-8">
+      <div className="flexw-full flex-col items-start bg-white p-2 justify-between">
+        <div className="flex items-center gap-4">
           <div>
-            <p className="text-[.9rem] font-semibold">{foodName}</p>
-            <p className="text-[.85rem] font-semibold text-[#FFA902]">{priceTag}</p>
+            <p className="text-[.8rem] font-semibold">{foodName}</p>
+            <p className="text-[.7rem] font-semibold">{priceTag}</p>
           </div>
           <div onClick={() => setLike(!like)}>
             <AiOutlineHeart size={20} className={`${like && "bg-red"}`} />
@@ -28,7 +28,7 @@ export default function CartCard({ imageUrl, foodName, priceTag, ordeUrl }) {
         </div>
 
         <Link href={ordeUrl}>
-          <p>Click to Order</p>
+          <p className="text-[.7rem] font-semibold text-[#FFA902]">Click to Order</p>
         </Link>
       </div>
     </div>

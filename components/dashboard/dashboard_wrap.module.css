@@ -1,5 +1,5 @@
 .dashboard_wrap .heading {
-  @apply flex justify-between mb-[2rem] h-[15vh];
+  @apply flex justify-between mb-[2rem];
 }
 .dashboard_wrap .heading .logo {
   @apply flex justify-start relative p-[1rem];

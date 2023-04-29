@@ -1,14 +1,11 @@
 .container {
-    @apply h-[85vh];
+    @apply h-full flex flex-col items-center;
     .main {
         @apply flex justify-between flex-col bg-[#FFA902] min-h-[100%] text-[1.5rem] w-full rounded-tr-[1.5rem];
-        padding: 1rem 0rem 1rem 1rem;
+        padding: 1rem 0;
 
-        .hi_user{
-            @apply flex justify-between items-center pr-[1rem];
-        }
         .nav_list{
-                @apply font-[600] flex flex-col gap-[1.4rem] text-neutral-600 pt-[4rem] pl-[1rem] capitalize text-[1.2rem];
+                @apply font-[600] flex flex-col justify-between gap-[2.2rem] text-neutral-600  pl-[1.5rem] capitalize text-[1.2rem];
         }
       
         .nav_link{
