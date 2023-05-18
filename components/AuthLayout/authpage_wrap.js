@@ -6,27 +6,45 @@ import TopBar from "./topBar";
 
 
 function AuthPage_Layout_wrap({children}) {
+  // this component contains the navigation on the left of all the logged in pages
+  // it also contains the function that will check and redirect users that are not logged in to the login page
   const router = useRouter()
-  const [minimize, setMinimize] = useState(false)
 
+  const [loggedIn, setLoggedIn] = useState(true)
+
+  const [minimize, setMinimize] = useState(true)
+
+  useEffect(() => {
+    // retrieve the token set in the local storage for all users stand to be edited
+    const isLoggedIn = localStorage.getItem("authenticated")
+    // setLoggedIn(isLoggedIn)
+  }, [])
+
+  const redirect = () =>{
+    router.push('/auth')
+  }
+  
+  if (!loggedIn) {
+    redirect()
+  } else{
     return (
-      <div className="h-full w-screen overflow-x-hidden flex flex-col justify-between">
+      <section className={styles.dashboard_wrap}>
         <TopBar/>
-        <div  className="flex items-start h-[calc(100vh-70px)] relative">
-          <div className={`h-full transition duration-75 w-[20%] ${minimize? "w-[6%]":""}`}>
+        <div  className="flex w-full mt-[8vh] items-start h-[92vh]">
+          <div className={`relative transition duration-[.5s] ${minimize? "w-[6%]":"w-[20%]"}`}>
             <Sidebar_nav
               minimize={minimize}
               setMinimize={setMinimize}/>
           </div>
 
           {/* the individual pages are wrapped here */}
-          <div className={`grow px-3 float-right h-full transition duration-100 ${minimize? "w-full":"w-[calc(100vw-16rem)]" }`}>
+          <div className={`grow  float-right h-full transition duration-[2s] ${minimize? "w-full ml-[2.5rem]":"w-[calc(100vw-12rem)]" }`}>
             {children}
           </div>
         </div>
-      </div>
+      </section>
     )
   }
-
+}
 
 export default AuthPage_Layout_wrap;

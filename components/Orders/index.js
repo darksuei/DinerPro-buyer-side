@@ -1,9 +1,10 @@
-import Cart from "./cartcontainer"
-
+import FoodContainer from "./foodcontainer"
+import CartScreen from "./cartContainer"
 export default function OrderComponent (){
     return(
-        <div>
-            <Cart/>
+        <div className="flex items-start justify-between">
+            <FoodContainer/>
+            <CartScreen/>
         </div>
     )
 }

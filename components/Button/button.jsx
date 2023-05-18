@@ -13,3 +13,4 @@ export default function Button({ background, Title, _width, func }) {
     </div>
   );
 }
+

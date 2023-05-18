@@ -1,5 +1,6 @@
 .section1 {
   @apply flex justify-between;
+  padding-top: 1rem;
 }
 .section1 .text h1 {
   @apply text-[1.4rem] capitalize font-[600];
@@ -9,35 +10,150 @@
 }
 .section1 .searches {
   @apply flex justify-between;
-  @apply max-lg:flex-col max-lg:gap-2 gap-4;
+  @apply max-lg:gap-2 gap-4;
 }
 .section1 .searches .search_box,
 .section1 .searches .location_box {
-  @apply rounded-[25px] h-fit border-[0.1rem] flex gap-2 border-[var(--clr-grey-border)] py-[0.1rem] px-[1rem];
+  @apply rounded-[25px] h-fit border-[0.1rem] flex gap-2 border-[var(--clr-grey-border)] py-[0.3rem] px-[1rem];
 }
 .section1 .searches .search_box input,
 .section1 .searches .location_box input {
-  @apply h-[1.5rem] w-[10rem] font-[0.7rem] outline-0;
+  @apply h-[1.5rem] w-[15rem] text-black text-[0.7rem] outline-0;
+}
+.section1 .searches .search_box input button,
+.section1 .searches .location_box input button {
+  @apply bg-red-900 rounded-full aspect-square;
 }
 
 .section2 {
-  @apply w-[1200px];
-  background-color: blue;
+  @apply w-[1200px] pt-2;
+}
+.section2 .category_box {
+  @apply flex gap-4;
+}
+.section2 .category_box .box1,
+.section2 .category_box .box2 {
+  @apply border-[0.1rem] border-[var(--clr-grey-border)] rounded-[0.5rem];
+  @apply h-[130px];
+}
+.section2 .category_box .box1 {
+  @apply px-3 w-[350px] shadow-md;
+}
+.section2 .category_box .box1 .categories {
+  @apply py-5 px-2;
+}
+.section2 .category_box .box1 .categories h1 {
+  @apply font-[400] pb-5 capitalize text-[1.5rem];
+}
+.section2 .category_box .box1 .categories span {
+  @apply flex justify-between;
+}
+.section2 .category_box .box1 .categories span button {
+  @apply border-[0.1rem] border-[var(--clr-grey-border)] rounded-[0.5rem];
+  @apply text-[0.7rem] font-[600] items-center capitalize px-2 py-[0.6rem] flex gap-4 flex-row bg-white;
+}
+.section2 .category_box .box1 .categories span button.active {
+  @apply bg-black text-white;
+}
+.section2 .category_box .box2 {
+  @apply py-2 px-3 w-[250px] shadow-md;
+}
+.section2 .category_box .box2 .best_rated_chef {
+  @apply font-[600] capitalize;
+}
+.section2 .category_box .box2 .best_rated_chef section {
+  @apply flex gap-4 pt-2;
+}
+.section2 .category_box .box2 .best_rated_chef .image {
+  @apply h-[80px] overflow-clip rounded-[0.7rem] aspect-square;
+}
+.section2 .category_box .box2 .best_rated_chef p {
+  @apply truncate;
+}
+.section2 .category_box .box2 .best_rated_chef .chef_details {
+  @apply flex items-center text-[0.9rem];
+}
+.section2 .category_box .box2 .best_rated_chef .chef_details span {
+  @apply flex flex-col gap-1;
+}
+.section2 .category_box .box2 .best_rated_chef .chef_details h2 {
+  @apply truncate;
+}
+.section2 .category_box .box2 .best_rated_chef .chef_details h6 {
+  @apply font-[400] text-[0.5rem] font-sans;
+}
+.section2 .mini_category {
+  @apply border-[0.1rem] border-[var(--clr-grey-border)] rounded-[0.5rem];
+  @apply my-2 mr-4 mt-4 rounded-[25px] flex gap-2 overflow-x-scroll max-w-[40rem];
+}
+.section2 .mini_category button {
+  @apply rounded-[25px] px-[2rem] py-[0.2rem] text-[0.6rem] text-black capitalize bg-white whitespace-nowrap;
+}
+.section2 .mini_category button.active {
+  @apply text-white bg-black;
+}
+.section2 .dashboard_data {
+  @apply border-[0.1rem] border-[var(--clr-grey-border)] rounded-[0.5rem];
+  @apply flex flex-col gap-4 p-[2rem] mr-4;
+}
+.section2 .dashboard_data .data {
+  @apply border-[0.1rem] border-[var(--clr-grey-border)] rounded-[0.5rem];
+  @apply flex justify-between items-center min-w-[25rem];
+}
+.section2 .dashboard_data .data .box1 {
+  @apply flex gap-6 items-center;
+}
+.section2 .dashboard_data .data .box1 .image_box {
+  @apply rounded-lg aspect-[1.4] w-fit overflow-clip;
+}
+.section2 .dashboard_data .data .box1 .details h4 {
+  @apply text-[var(--clr-brandcolor)] capitalize text-[0.7rem];
+}
+.section2 .dashboard_data .data .box1 .details h2 {
+  @apply capitalize;
+}
+.section2 .dashboard_data .data .box1 .details .review_box {
+  @apply flex gap-4 items-center text-[var(--clr-blur-200)] text-[0.9rem] font-sans;
+}
+.section2 .dashboard_data .data .box1 .details .review_box p {
+  @apply text-[0.5rem];
+}
+.section2 .dashboard_data .data .see_more {
+  @apply px-6 text-[0.6rem] capitalize text-[var(--clr-blur-200)];
 }
 
 .aside {
   @apply pt-[1.5rem];
-  width: 250px;
+  width: 300px;
   min-width: 250px;
 }
 .aside .header_text {
   @apply flex gap-2 text-[1.3rem] items-center capitalize font-[600];
 }
 .aside .trending_menu {
-  @apply border-[0.1rem] border-[var(--clr-grey-border)] rounded-[0.7rem];
-  @apply px-2 py-3;
+  @apply border-[0.1rem] border-[var(--clr-grey-border)] rounded-[0.5rem];
+  @apply px-2 py-3 flex flex-col gap-4;
 }
 .aside .trending_menu .trend_menu {
-  @apply border-[0.1rem] border-[var(--clr-grey-border)] rounded-[0.7rem];
-  @apply overflow-clip h-[80px] flex;
-}/*# sourceMappingURL=dashboard.module.css.map */
+  @apply border-[0.1rem] border-[var(--clr-grey-border)] rounded-[0.5rem];
+  @apply overflow-clip h-[80px] flex gap-4 items-center text-[0.8rem];
+}
+.aside .trending_menu .trend_menu .details h1 {
+  @apply truncate text-[0.9rem] font-[400] capitalize;
+}
+.aside .trending_menu .trend_menu .details .likes {
+  @apply flex gap-2 text-pink-600 items-center text-[0.7rem];
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.no_scroll_bar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no_scroll_bar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/*# sourceMappingURL=dashboard.module.css.map */

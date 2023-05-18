@@ -1,0 +1,121 @@
+.section1 {
+  @apply w-[60%] capitalize;
+}
+.section1 .image {
+  @apply w-[140px] rounded-xl relative aspect-square overflow-hidden mr-6;
+}
+.section1 .name {
+  @apply font-[400];
+}
+.section1 .category {
+  @apply text-[0.7rem] shadow-md text-white font-[400] rounded-md my-1 py-[0.1rem] px-4 bg-[var(--clr-secondary)];
+}
+.section1 .location {
+  @apply flex items-center gap-1 text-[0.7rem];
+}
+.section1 .location span {
+  @apply text-[1rem];
+}
+.section1 .more {
+  @apply border-[0.1rem] rounded-lg border-[var(--clr-grey-border)];
+  @apply mt-4 p-4 text-[0.7rem];
+}
+.section1 .more h1 {
+  @apply text-[0.8rem] py-2 font-[600];
+}
+.section1 .more hr {
+  margin-top: 6px;
+}
+.section1 .more p {
+  @apply text-[var(--clr-grey-text)];
+}
+
+.section2 {
+  @apply border-[0.1rem] rounded-lg border-[var(--clr-grey-border)];
+  @apply w-[40%] p-4;
+}
+.section2 .skills {
+  @apply capitalize;
+}
+.section2 .skills h1 {
+  @apply font-[600] capitalize;
+}
+.section2 .skills div {
+  @apply py-2 flex gap-2 flex-wrap;
+}
+.section2 .skills div button {
+  @apply capitalize border-[0.1rem] text-[0.7rem] px-2 rounded border-[#ffab024d];
+}
+.section2 .skills .button {
+  @apply text-[0.6rem] mb-4 mt-2 shadow-md py-1 bg-[var(--clr-secondary)] rounded px-5 text-white;
+}
+.section2 .contact h1 {
+  @apply py-5 text-[0.8rem] font-[600];
+}
+.section2 .contact p {
+  @apply text-[var(--clr-grey-text)] text-[0.7rem] capitalize pb-1;
+}
+.section2 .contact h2 {
+  @apply text-[0.8rem] pt-2 font-[600];
+}
+
+.section3 {
+  @apply w-[60%] capitalize p-4 mt-2;
+  @apply border-[0.1rem] rounded-lg border-[var(--clr-grey-border)];
+}
+.section3 h1 {
+  @apply font-[600] text-[0.8rem] capitalize;
+}
+.section3 .portfolios {
+  @apply pt-8 flex overflow-x-auto gap-4 px-2 pb-2;
+}
+.section3 .portfolios .portfolio_render {
+  @apply min-w-[125px] shadow shadow-black/20 overflow-hidden rounded-lg;
+}
+.section3 .portfolios .portfolio_render .picture {
+  @apply w-full h-[153px] relative overflow-hidden;
+}
+.section3 .portfolios .portfolio_render .name {
+  @apply p-1 pb-1 text-left;
+}
+.section3 .portfolios .portfolio_render .name p {
+  @apply text-[10px] font-[400] capitalize;
+}
+.section3 .portfolios .portfolio_render .name button {
+  @apply text-[10px] text-[var(--clr-secondary)];
+}
+.section3 .mini_chef_tab {
+  @apply flex justify-center items-center pt-6 fixed top-0 right-0 min-w-[100vw] min-h-[100vh] backdrop-blur-[1px] bg-black/20;
+  z-index: 10000000;
+}
+.section3 .mini_chef_tab .container {
+  @apply border-[0.1rem] rounded-lg border-[var(--clr-grey-border)];
+  @apply p-8;
+}
+
+.section4 {
+  @apply border-[0.1rem] rounded-lg border-[var(--clr-grey-border)];
+  @apply w-[40%] p-4 mt-2;
+}
+.section4 h1 {
+  @apply font-[600] text-[0.8rem] capitalize;
+}
+.section4 a,
+.section4 p {
+  @apply text-[0.6rem] flex;
+}
+.section4 a span,
+.section4 p span {
+  @apply text-[var(--clr-secondary)] flex pl-2 text-[1rem];
+}
+.section4 .review_box {
+  @apply overflow-x-scroll flex pt-10;
+}
+.section4 .review_box .reviews {
+  @apply m-1 shadow shadow-black/20 min-w-[120px] flex gap-1 flex-col text-[0.7rem] items-center p-3 rounded justify-center;
+}
+.section4 .review_box .reviews p {
+  @apply max-h-14 overflow-clip text-[0.5rem];
+}
+
+/*# sourceMappingURL=chef.module.css.map */

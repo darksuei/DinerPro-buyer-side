@@ -1,0 +1,161 @@
+@mixin border_line {
+    @apply border-[0.1rem] rounded-lg border-[var(--clr-grey-border)];
+}
+
+.section1 {
+    @apply w-[60%] capitalize;
+
+    .image {
+        @apply w-[140px] rounded-xl relative aspect-square overflow-hidden mr-6;
+    }
+
+    .name {
+        @apply font-[400];
+    }
+
+    .category {
+        @apply text-[0.7rem] shadow-md text-white font-[400] rounded-md my-1 py-[0.1rem] px-4 bg-[var(--clr-secondary)];
+    }
+
+    .location {
+        @apply flex items-center gap-1 text-[0.7rem];
+
+        span {
+            @apply text-[1rem];
+        }
+    }
+
+    .more {
+        @include border_line;
+        @apply mt-4 p-4 text-[0.7rem];
+
+        h1 {
+            @apply text-[0.8rem] py-2 font-[600];
+        }
+
+        hr {
+            margin-top: 6px;
+        }
+
+        p {
+            @apply text-[var(--clr-grey-text)];
+        }
+
+    }
+}
+
+.section2 {
+    @include border_line;
+    @apply w-[40%] p-4;
+
+    .skills {
+        @apply capitalize;
+
+        h1 {
+            @apply font-[600] capitalize;
+        }
+
+        div {
+            @apply py-2 flex gap-2 flex-wrap;
+
+            button {
+                @apply capitalize border-[0.1rem] text-[0.7rem] px-2 rounded border-[#ffab024d];
+            }
+        }
+
+        .button {
+            @apply text-[0.6rem] mb-4 mt-2 shadow-md py-1 bg-[var(--clr-secondary)] rounded px-5 text-white;
+        }
+    }
+
+    .contact {
+        h1 {
+            @apply py-5 text-[0.8rem] font-[600];
+        }
+
+        p {
+            @apply text-[var(--clr-grey-text)] text-[0.7rem] capitalize pb-1;
+        }
+
+        h2 {
+            @apply text-[0.8rem] pt-2 font-[600];
+        }
+    }
+}
+
+.section3 {
+    // this is where i am at
+    @apply w-[60%] capitalize p-4 mt-2;
+    @include border_line;
+
+    h1 {
+        @apply font-[600] text-[0.8rem] capitalize;
+    }
+
+    .portfolios {
+        @apply pt-8 flex overflow-x-auto gap-4 px-2 pb-2;
+
+        .portfolio_render {
+            // @include border_line;
+            @apply min-w-[125px] shadow shadow-black/20 overflow-hidden rounded-lg;
+
+            .picture {
+                @apply w-full h-[153px] relative overflow-hidden;
+            }
+
+            .name {
+                @apply p-1 pb-1 text-left;
+
+                p {
+                    @apply text-[10px] font-[400] capitalize;
+                }
+
+                button {
+                    @apply text-[10px] text-[var(--clr-secondary)]
+                }
+            }
+        }
+    }
+
+    .mini_chef_tab {
+        @apply flex justify-center items-center pt-6 fixed top-0 right-0 min-w-[100vw] min-h-[100vh] backdrop-blur-[1px] bg-black/20;
+        z-index: 10000000;
+
+        .container{
+            @include border_line;
+            @apply p-8;
+        }
+    }
+}
+
+.section4 {
+    @include border_line;
+    @apply w-[40%] p-4 mt-2;
+
+    h1 {
+        @apply font-[600] text-[0.8rem] capitalize;
+    }
+
+    a,
+    p {
+        @apply text-[0.6rem] flex;
+
+        span {
+            @apply text-[var(--clr-secondary)] flex pl-2 text-[1rem];
+        }
+    }
+
+    .review_box {
+        @apply overflow-x-scroll flex pt-10;
+
+        .reviews {
+            @apply m-1 shadow shadow-black/20 min-w-[120px] flex gap-1 flex-col text-[0.7rem] items-center p-3 rounded justify-center;
+
+            p {
+                @apply max-h-14 overflow-clip text-[0.5rem];
+            }
+        }
+
+    }
+
+}
