@@ -1,10 +1,18 @@
 import Image from "next/image";
-import Link from "next/link";
 
 import { AiOutlineHeart } from "react-icons/Ai";
 import { useState } from "react";
+import { Store } from "@/contexts/orderCart";
+import React, { useContext } from 'react';
 
 export default function CartCard({ food }) {
+  const { state, dispatch } = useContext(Store);
+  const addToCartHandler = () => {
+    // const existItem = state.cart.cartItems.find((x) => x.slug === food.slug);
+    
+    // // const quantity = existItem ? existItem.quantity + 1 : 1;
+    dispatch({ type: 'CART_ADD_ITEM', payload: { ...food } });
+  };
   const [like, setLike] = useState(false);
   return (
     <div className="w-[150px] shadow-lg rounded-lg overflow-hidden">
@@ -27,9 +35,9 @@ export default function CartCard({ food }) {
           </div>
         </div>
 
-        <div >
+        <button onClick={addToCartHandler}>
           <p className="text-[.6rem] text-[#FFA902]">Click to Order</p>
-        </div>
+        </button>
       </div>
     </div>
   );

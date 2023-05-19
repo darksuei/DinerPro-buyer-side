@@ -10,23 +10,10 @@ import { toast } from "react-toastify";
 import shoppingCart from "@/public/images/shoppingCart.png"
 
 function CartScreen() {
-	const router = useRouter();
 	const { state, dispatch } = useContext(Store);
-	const {
-		cart: { cartItems },
-	} = state;
-	const removeItemHandler = (item) => {
-		dispatch({ type: "CART_REMOVE_ITEM", payload: item });
-	};
-	const updateCartHandler = async (item, qty) => {
-		const quantity = Number(qty);
-		const { data } = await axios.get(`/api/products/${item._id}`);
-		if (data.countInStock < quantity) {
-			return toast.error("Sorry. Food is out of stock");
-		}
-		dispatch({ type: "CART_ADD_ITEM", payload: { ...item, quantity } });
-		toast.success("Product updated in the cart");
-	};
+	const {cart: { cartItems }} = state;
+	console.log(cartItems)
+
 	return (
 		<div className="w-[38%] border border-[#FFA902] rounded-lg min-h-[85vh]">
 			<h1 className="text-[1.3rem] font-bold">My Orders</h1>
@@ -43,8 +30,18 @@ function CartScreen() {
 					<p>You have not made any orders </p>
 				</div>
 			) : (
-				<div className="grid md:grid-cols-4 md:gap-5">
-			
+				<div className="">
+					{
+						cartItems.map((item, i)=>{
+							return(
+								<div key={i}>
+									<div className="relative w-[73px] h-[57px]">
+										<Image src={item.imageUrl} fill style={{objectFit:"contain"}} alt={item.foodName}/>
+									</div>
+								</div>
+							)
+						})
+					}
 				</div>
 			)}
 		</div>
@@ -52,3 +49,4 @@ function CartScreen() {
 }
 
 export default dynamic(() => Promise.resolve(CartScreen), { ssr: false });
+// export default CartScreen;
