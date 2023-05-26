@@ -10,7 +10,8 @@ export default function Order() {
       </Head>
       <div className="p-4">
         <div
-          className={`${styles.no_scroll_bar} overflow-y-auto max-h-[calc(100vh-4rem)] `}>
+          className={`${styles.no_scroll_bar} overflow-y-auto max-h-[calc(100vh-4rem)] `}
+        >
           main dashboard contents here
         </div>
       </div>

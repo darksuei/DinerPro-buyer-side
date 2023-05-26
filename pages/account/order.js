@@ -1,19 +1,19 @@
 import Head from "next/head";
+import AuthPage_Layout_wrap from "@/components/AuthLayout/authpage_wrap";
+import OrderComponent from "@/components/Orders";
 
-function Order() {
+function order() {
   return (
-    <div>
+    <AuthPage_Layout_wrap>
       <Head>
         <title>Dinerpro Order</title>
       </Head>
-      <div className="p-4">
-        <div
-          className={`${styles.no_scroll_bar} overflow-y-auto max-h-[calc(100vh-4rem)] `}>
-          main Order contents here
-        </div>
+      <div className="p-4 ">
+        <div>main Order contents here</div>
       </div>
-    </div>
+      <OrderComponent />
+    </AuthPage_Layout_wrap>
   );
 }
 
-export default Order;
+export default order;
