@@ -12,41 +12,45 @@ import { TbCurrencyNaira } from "react-icons/tb";
 import { MdOutlineBikeScooter } from "react-icons/md";
 import ProfileImage from "../../Assets/homesec3_1.png";
 import Mini_notifications from "./mini_notifications";
+import Sidebar_nav from "./Sidebar/sidebar_nav";
 function TopBar() {
-	const Route = useRouter();
+  const Route = useRouter();
 
-	const renderTop = nav_endpoints.filter((data) => {
-		return Route.pathname === data.path;
-	});
+  const renderTop = nav_endpoints.filter((data) => {
+    return Route.pathname === data.path;
+  });
 
-	return (
-		<div className="flex fixed top-0 right-0 left-0 justify-between items-center w-screen h-[8vh] my-2 bg-white z-20">
-			<Link className="relative w-[100px] h-[30px]" href="/">
-				<Image
-					src={Logo}
-					fill
-					style={{ objectFit: "contain" }}
-					alt="dinnerpro"
-				/>
-			</Link>
+  return (
+    <>
+      <div className="flex fixed top-0 right-0 left-0 justify-between items-center w-screen h-[8vh] my-2 bg-white z-20">
+        <Link className="relative w-[100px] h-[30px]" href="/">
+          <Image
+            src={Logo}
+            fill
+            style={{ objectFit: "contain" }}
+            alt="dinnerpro"
+          />
+        </Link>
 
-			<div className="flex justify-between w-[80%] text-[1.3rem] font-[600] capitalize px-[4rem] items-center">
-				<div className="flex items-center gap-4 justify-center">
-					<p>{Route.pathname.substring(1)}</p>
-				</div>
+        <div className="flex justify-between w-[80%] text-[1.3rem] font-[600] capitalize px-[4rem] items-center">
+          <div className="flex items-center gap-4 justify-center">
+            <p>{Route.pathname.substring(1)}</p>
+          </div>
 
-				<div>
-					<Image
-						src={ProfileImage}
-						alt={`profile image`}
-						heigth={40}
-						width={40}
-						className="roounded-[100%]"
-					/>
-				</div>
-			</div>
-		</div>
-	);
+          <div>
+            <Image
+              src={ProfileImage}
+              alt={`profile image`}
+              heigth={40}
+              width={40}
+              className="roounded-[100%]"
+            />
+          </div>
+        </div>
+      </div>
+      {/* <Sidebar_nav /> */}
+    </>
+  );
 }
 
 export default TopBar;
@@ -55,29 +59,29 @@ export default TopBar;
 const username = "Lana";
 
 const nav_endpoints = [
-	{
-		name: "Dashboard",
-		path: "/dashboard",
-		icon: <GoDashboard />,
-	},
-	{
-		name: "Orders",
-		path: "/order",
-		icon: <GiKnifeFork />,
-	},
-	{
-		name: "delivery status",
-		path: "/delivery_status",
-		icon: <TbCurrencyNaira />,
-	},
-	{
-		name: "Settings",
-		path: "/settings",
-		icon: <MdOutlineBikeScooter />,
-	},
-	{
-		name: "Help desk",
-		path: "/help_desk",
-		icon: <AiOutlineSetting />,
-	},
+  {
+    name: "Dashboard",
+    path: "/dashboard",
+    icon: <GoDashboard />,
+  },
+  {
+    name: "Orders",
+    path: "/order",
+    icon: <GiKnifeFork />,
+  },
+  {
+    name: "delivery status",
+    path: "/delivery_status",
+    icon: <TbCurrencyNaira />,
+  },
+  {
+    name: "Settings",
+    path: "/settings",
+    icon: <MdOutlineBikeScooter />,
+  },
+  {
+    name: "Help desk",
+    path: "/help_desk",
+    icon: <AiOutlineSetting />,
+  },
 ];
