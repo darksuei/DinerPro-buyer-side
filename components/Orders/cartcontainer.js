@@ -1,5 +1,5 @@
 import Image from "next/image";
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Store } from "@/contexts/orderCart";
 import { useRouter } from "next/router";
 import dynamic from "next/dynamic";
@@ -8,10 +8,13 @@ import dynamic from "next/dynamic";
 import shoppingCart from "@/public/images/shoppingCart.png";
 //currenct formatter
 import CurrencyFormatter from "@/utils/formatCurrency";
+import { MdDelete } from "react-icons/md";
 
 function CartScreen() {
   //usestate for confirmed order
   const [confirmed, setConfirmed] = useState(false);
+  //cart items
+  // const [cartLists, setCartLists] = useState([]);
 
   const { state, dispatch } = useContext(Store);
   const {
@@ -46,7 +49,7 @@ function CartScreen() {
     });
   };
 
-  //clear cart/ cancel order
+  // clear cart/ cancel order
   const clearItems = (item) => {
     dispatch({
       type: "CART_CLEAR_ITEMS",
@@ -106,10 +109,16 @@ function CartScreen() {
               <div>
                 <div className="flex items-center space-x-2">
                   <button
-                    className="px-2 py-1 border border-red-700 rounded-md"
+                    className={`px-2 py-1 border ${
+                      item.quantity === 1 ? "border-red-700" : "border-red-700"
+                    } rounded-md`}
                     onClick={() => decreaseQuantity(item)}
                   >
-                    -
+                    {item.quantity === 1 ? (
+                      <MdDelete size={25} color="rgb(185 28 28)" />
+                    ) : (
+                      "-"
+                    )}
                   </button>
                   <p>{item.quantity}</p>
                   <button
