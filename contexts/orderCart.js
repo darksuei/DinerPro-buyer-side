@@ -93,6 +93,8 @@ function reducer(state, action) {
           paymentMethod: "",
         },
       };
+
+    //clear cart items
     case "CART_CLEAR_ITEMS":
       return { ...state, cart: { ...state.cart, cartItems: [] } };
 
