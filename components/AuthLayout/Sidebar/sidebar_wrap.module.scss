@@ -1,25 +1,25 @@
-.dashboard_wrap{
-   .heading{
+.dashboard_wrap {
+  .heading {
     @apply flex justify-between mb-[2rem];
-        // top bar section
-        .logo {
-            @apply flex justify-start relative p-[1rem];
-    
-            .logo_image {
-                position: relative;
-                width: 100px;
-                height: 30px;
-            }
-        }
-        .top_nav{
-            @apply flex justify-between w-[80%] text-[1.3rem] font-[600] capitalize px-[4rem] items-center mt-8;
-        }
-        .secondary_nav{
-            @apply flex justify-around text-[1.2rem]  font-[400] absolute top-0 right-0 w-[50%] border-b-2 border-l-2 border-slate-300 ;
-            padding: 2rem 1rem 0.5rem 4rem;
-            a{
-                @apply hover:font-[600] transition duration-75;
-            }
-        }
-   }
+    // top bar section
+    .logo {
+      @apply flex justify-start relative p-[1rem];
+
+      .logo_image {
+        position: relative;
+        width: 100px;
+        height: 30px;
+      }
+    }
+    .top_nav {
+      @apply flex justify-between w-[80%] text-[1.3rem] font-[600] capitalize px-[4rem] items-center mt-8;
+    }
+    .secondary_nav {
+      @apply flex justify-around text-[1.2rem]  font-[400] absolute top-0 right-0 w-[50%] border-b-2 border-l-2 border-slate-300;
+      padding: 2rem 1rem 0.5rem 4rem;
+      a {
+        @apply hover:font-[600] transition duration-75;
+      }
+    }
+  }
 }

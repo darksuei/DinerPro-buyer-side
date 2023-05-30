@@ -21,6 +21,9 @@ function CartScreen() {
     cart: { cartItems },
   } = state;
 
+  //router
+  const router = useRouter();
+
   //increase item quantity
   const increaseQuantity = (item) => {
     dispatch({
@@ -68,6 +71,18 @@ function CartScreen() {
   const handleConfirmOrder = () => {
     setConfirmed(true);
   };
+
+  //to the checkout page
+  const handleCheckout = () => {
+    // Perform any necessary checkout logic here
+    const cartItemsQuery = cartItemsArray.join(",");
+    router.push(`/auth/checkout?cartItems=${cartItemsQuery}`);
+  };
+
+  // const handleCheckout = () => {
+  //   const cartItemsQuery = cartItems.join(",");
+  //   router.push(`/auth/checkout?cartItems=${cartItemsQuery}`);
+  // };
 
   return (
     <div className="w-[500px] border border-[#FFA902] rounded-lg h-[820px] p-5 overflow-y-auto flex flex-col">
@@ -146,7 +161,10 @@ function CartScreen() {
             </div>
             <div className="flex flex-row mt-5 justify-between">
               {confirmed ? (
-                <button className="border hover:border-[#FFA902] text-white hover:bg-white hover:text-black bg-[#FFA902] p-5 w-[200px] rounded-lg">
+                <button
+                  className="border hover:border-[#FFA902] text-white hover:bg-white hover:text-black bg-[#FFA902] p-5 w-[200px] rounded-lg"
+                  onClick={handleCheckout}
+                >
                   Checkout
                 </button>
               ) : (
