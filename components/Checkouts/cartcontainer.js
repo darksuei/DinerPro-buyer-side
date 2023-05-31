@@ -1,7 +1,7 @@
 import React from "react";
 import { useRouter } from "next/router";
 import Image from "next/image";
-import { foodArrays } from "@/utils/data";
+// import { foodArrays } from "@/utils/data";
 
 const CartContainer = () => {
   const router = useRouter();

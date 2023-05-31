@@ -73,16 +73,15 @@ function CartScreen() {
   };
 
   //to the checkout page
-  const handleCheckout = () => {
-    // Perform any necessary checkout logic here
-    const cartItemsQuery = cartItemsArray.join(",");
-    router.push(`/auth/checkout?cartItems=${cartItemsQuery}`);
-  };
-
   // const handleCheckout = () => {
-  //   const cartItemsQuery = cartItems.join(",");
+  //   // Perform any necessary checkout logic here
+  //   const cartItemsQuery = cartItemsArray.join(",");
   //   router.push(`/auth/checkout?cartItems=${cartItemsQuery}`);
   // };
+  const handleCheckout = () => {
+    const cartItemsQuery = cartItems.map((item) => item.slug).join(",");
+    router.push(`/auth/checkout?cartItems=${cartItemsQuery}`);
+  };
 
   return (
     <div className="w-[500px] border border-[#FFA902] rounded-lg h-[820px] p-5 overflow-y-auto flex flex-col">
