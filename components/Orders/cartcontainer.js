@@ -1,10 +1,8 @@
 import Image from "next/image";
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useState } from "react";
 import { Store } from "@/contexts/orderCart";
 import { useRouter } from "next/router";
 import dynamic from "next/dynamic";
-// import axios from "axios";
-// import { toast } from "react-toastify";
 import shoppingCart from "@/public/images/shoppingCart.png";
 //currenct formatter
 import CurrencyFormatter from "@/utils/formatCurrency";
@@ -74,18 +72,12 @@ function CartScreen() {
 
   //to the checkout page
   const handleCheckout = () => {
-    // Perform any necessary checkout logic here
-    const cartItemsQuery = cartItemsArray.join(",");
+    const cartItemsQuery = cartItems.map((item) => item.slug).join(",");
     router.push(`/auth/checkout?cartItems=${cartItemsQuery}`);
   };
 
-  // const handleCheckout = () => {
-  //   const cartItemsQuery = cartItems.join(",");
-  //   router.push(`/auth/checkout?cartItems=${cartItemsQuery}`);
-  // };
-
   return (
-    <div className="w-[500px] border border-[#FFA902] rounded-lg h-[820px] p-5 overflow-y-auto flex flex-col">
+    <div className="w-[500px] border border-[#FFA902] rounded-lg h-[830px] p-5 overflow-y-auto flex flex-col">
       <h1 className="text-[1.3rem] font-bold py-2">My Orders</h1>
       <div className="">
         <ul className="flex items-center justify-between space-x-4">

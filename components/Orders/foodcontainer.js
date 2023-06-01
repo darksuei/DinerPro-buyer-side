@@ -63,7 +63,7 @@ export default function FoodContainer() {
 
   return (
     <div className="overflow-x-auto">
-      <div className="relative pr-12 pl-12  flex flex-col w-[700px] h-[820px] overflow-hidden border border-[#CCCCCC] rounded-lg">
+      <div className="relative pr-12 pl-12  flex flex-col w-[700px] h-[830px] overflow-hidden border border-[#CCCCCC] rounded-lg">
         <h1 className="text-[1.3rem] font-bold py-8">My Cart</h1>
         <div className="flex mb-5 items-center gap-8">
           <Search />
