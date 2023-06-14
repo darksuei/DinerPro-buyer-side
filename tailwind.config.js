@@ -4,6 +4,7 @@ module.exports = {
     "./app/**/*.{js,ts,jsx,tsx}",
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
+    "./components_seller/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
@@ -24,13 +25,13 @@ module.exports = {
         // => @media (min-width: 1536px) { ... }
       },
       boxShadow: {
-        '3xl': '0px 5px 20px rgba(0, 0, 0, 0.2)',
-        '4xl': '0px 5px 20px rgba(0, 0, 0, 0.4)',
+        "3xl": "0px 5px 20px rgba(0, 0, 0, 0.2)",
+        "4xl": "0px 5px 20px rgba(0, 0, 0, 0.4)",
       },
       colors: {
         "Text-green": "#6BAF71",
         backdrop: "rgba(12, 12, 12, 0.33)",
-        genBg: "rgb(207, 215, 223)"
+        genBg: "rgb(207, 215, 223)",
       },
       fontFamily: {
         Rampart: ["Rampart One", "cursive"],
@@ -42,9 +43,9 @@ module.exports = {
         comic: ["Comic Neue", "cursive"],
       },
       backgroundImage: {
-        'roadmapbg': "url('/roadmap.png')",
-        'footer-texture': "url('/img/footer-texture.png')",
-      }
+        roadmapbg: "url('/roadmap.png')",
+        "footer-texture": "url('/img/footer-texture.png')",
+      },
     },
   },
   plugins: [],
