@@ -3,6 +3,8 @@ import { useRouter } from "next/router";
 import Image from "next/image";
 import { Store } from "@/contexts/orderCart";
 import CurrencyFormatter from "@/utils/formatCurrency";
+import MonnifyConfig from "@/monnify-payment/monnifyConfig";
+//payments
 
 const CartContainer = () => {
   const router = useRouter();
@@ -23,14 +25,6 @@ const CartContainer = () => {
   return (
     <div className="w-[500px] border border-[#FFA902] rounded-lg h-[830px] p-5 overflow-y-auto flex flex-col">
       <h1 className="text-[1.3rem] font-bold py-2">My Orders</h1>
-      {/* <div>
-        <ul className="flex items-center justify-between space-x-4">
-          <li>Items</li>
-          <li>Qty</li>
-          <li>Amount</li>
-        </ul>
-        <hr className="border-[#ccc] mt-3" />
-      </div> */}
 
       {cartItems.length === 0 ? (
         <div className="h-full flex flex-col items-center justify-center">
@@ -81,9 +75,7 @@ const CartContainer = () => {
             </div>
           </div>
           <div className="flex justify-center">
-            <button className="mt-10 bg-[#ffa902] w-[311px] p-[15px] rounded-lg">
-              make payments
-            </button>
+            <MonnifyConfig totalAmount={total} />
           </div>
         </div>
       )}
