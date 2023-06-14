@@ -84,7 +84,7 @@ const nav_endpoints = [
   },
   {
     name: "delivery status",
-    path: "/delivery_status",
+    path: "/auth/delivery",
     icon: <TbCurrencyNaira />,
   },
   {
